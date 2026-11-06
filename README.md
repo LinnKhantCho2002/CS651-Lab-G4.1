@@ -34,7 +34,7 @@ The page keeps the original FriendlyEats layout. The Firebase SDK is bundled loc
 | Google Cloud project | `cs651-n33-lcho-20261014` |
 | App Engine region | `us-west1` |
 | App Engine service | `friendlyeats` |
-| Active version | `g41-20261106b` |
+| Active version | `g41-key-20261106b` |
 | Runtime / instance class | Node.js 22 / F1 |
 | Scaling | Automatic, minimum 0 / maximum 1 instance |
 | Firestore database | `friendlyeats` — Native mode, `us-west1` |
@@ -56,7 +56,7 @@ npm run check
 npm start
 ```
 
-Open http://localhost:8080/. Local development connects to the real `friendlyeats` database using anonymous authentication, not an emulator. `public/firebase-config.js` is local deployment configuration and is excluded from Git. Configure it locally with an authorized, restricted Firebase browser API key before building or deploying. No API key or service-account credential is stored in this repository.
+Open http://localhost:8080/. Local development connects to the real `friendlyeats` database using anonymous authentication, not an emulator. `public/firebase-config.js` is local deployment configuration and is excluded from Git. Configure it locally with an authorized, restricted Firebase browser API key before building or deploying. The key is restricted to the lab App Engine origin and localhost, and to Authentication, Token Service, and Firestore APIs. No API key or service-account credential is stored in this repository.
 
 ## Deploy
 
@@ -80,7 +80,7 @@ Build the browser bundle locally, then deploy it:
 ```sh
 npm run build
 npm run check
-gcloud app deploy app.yaml --version=g41-20261106b --project=cs651-n33-lcho-20261014
+gcloud app deploy app.yaml --version=g41-key-20261106b --project=cs651-n33-lcho-20261014
 gcloud app browse --service=friendlyeats --project=cs651-n33-lcho-20261014
 ```
 
@@ -99,3 +99,5 @@ This is an educational codelab. Anonymous users can create sample restaurants an
 Based on Google's [Cloud Firestore Web Codelab](https://firebase.google.com/codelabs/firestore-web) and the `vanilla-js` starter in [firebase/friendlyeats-web](https://github.com/firebase/friendlyeats-web), upstream commit `0120c72661751d10374bb6e5a62bf094253f6409`. Google source headers and the Apache 2.0 license are retained. Local changes complete the codelab data functions, use the modular Firebase SDK with a named database, add error handling and accessible review controls, configure rules/indexes, and deploy the Node.js server on GAE instead of Firebase Hosting.
 
 The browser also uses Material Components Web 0.39.3 (MIT), Navigo 6.0.2 (MIT), and the Firebase JavaScript SDK 13.2.0 (Apache 2.0). Bundled third-party license notices are retained.
+
+Repository history was rewritten on November 6, 2026 to remove the previously committed Firebase configuration, and that API key was revoked. If you cloned the earlier history, use a fresh clone rather than merging the old commits back into this repository.

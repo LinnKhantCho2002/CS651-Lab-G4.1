@@ -3,7 +3,7 @@
   "url": "https://friendlyeats-dot-cs651-n33-lcho-20261014.uw.r.appspot.com/",
   "project": "cs651-n33-lcho-20261014",
   "service": "friendlyeats",
-  "version": "g41-20261106b",
+  "version": "g41-key-20261106b",
   "database": "friendlyeats",
   "nativeMode": true,
   "health": {
@@ -189,5 +189,13 @@
       "G4.1_Firestore_Data.png"
     ],
     "liveUrlIncludedInComment": true
+  },
+  "apiKeyRemediation": {
+    "exposedKeyRevoked": true,
+    "revokedKeyAuthStatus": 400,
+    "unapprovedReferrerStatus": 403,
+    "approvedReferrerStatus": 200,
+    "keyMatchesInCleanRemoteHistory": 0,
+    "freshAnonymousSignInVerified": true
   }
 }
