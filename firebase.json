@@ -1,0 +1,9 @@
+{
+  "firestore": [
+    {
+      "database": "friendlyeats",
+      "rules": "firestore.rules",
+      "indexes": "firestore.indexes.json"
+    }
+  ]
+}

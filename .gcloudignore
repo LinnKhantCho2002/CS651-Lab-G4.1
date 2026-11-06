@@ -1,0 +1,9 @@
+.gcloudignore
+.git/
+node_modules/
+evidence/
+submissions/
+/scripts/
+README.md
+*.log
+.playwright-mcp/

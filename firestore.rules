@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /restaurants/{restaurantId} {
+      allow read: if request.auth != null;
+      // The codelab seeds fictional restaurants from its authenticated web client.
+      allow create: if request.auth != null
+        && request.resource.data.keys().hasOnly(['name', 'category', 'city', 'price', 'photo', 'numRatings', 'avgRating'])
+        && request.resource.data.name is string
+        && request.resource.data.category is string
+        && request.resource.data.city is string
+        && request.resource.data.photo is string
+        && request.resource.data.price is int
+        && request.resource.data.price >= 1 && request.resource.data.price <= 4
+        && request.resource.data.numRatings == 0 && request.resource.data.avgRating == 0;
+      // Reviews can change aggregates, but cannot overwrite restaurant details.
+      allow update: if request.auth != null
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['numRatings', 'avgRating'])
+        && request.resource.data.numRatings is int
+        && request.resource.data.numRatings >= 1
+        && request.resource.data.avgRating is number
+        && request.resource.data.avgRating >= 1 && request.resource.data.avgRating <= 5;
+      match /ratings/{ratingId} {
+        allow read: if request.auth != null;
+        allow create: if request.auth != null
+          && request.resource.data.keys().hasOnly(['rating', 'text', 'userName', 'timestamp', 'userId'])
+          && request.resource.data.userId == request.auth.uid
+          && request.resource.data.rating is int
+          && request.resource.data.rating >= 1 && request.resource.data.rating <= 5
+          && request.resource.data.text is string
+          && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 2000
+          && request.resource.data.userName is string
+          && request.resource.data.timestamp is timestamp;
+      }
+    }
+  }
+}

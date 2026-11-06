@@ -1,0 +1,25 @@
+{
+  "name": "cs651-g41-friendlyeats",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FriendlyEats Firestore codelab deployed with Node.js on App Engine",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/scripts/FriendlyEats.js && node --check public/scripts/FriendlyEats.Data.js && node --check public/scripts/FriendlyEats.View.js",
+    "build": "esbuild scripts/firebase-init.js --bundle --minify --outfile=public/scripts/firebase-init.bundle.js",
+    "gcp-build": ""
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "firebase": "^13.2.0"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "^1.14.7"
+  }
+}
