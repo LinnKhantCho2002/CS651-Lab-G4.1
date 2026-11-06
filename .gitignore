@@ -6,3 +6,7 @@ node_modules/
 .playwright-mcp/
 evidence/
 submissions/
+
+# Deployment-specific configuration and credentials
+.local/
+public/firebase-config.js

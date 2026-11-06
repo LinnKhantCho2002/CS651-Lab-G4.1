@@ -54,7 +54,7 @@ npm run check
 npm start
 ```
 
-Open http://localhost:8080/. Local development connects to the real `friendlyeats` database using anonymous authentication, not an emulator. `public/firebase-config.js` contains the Firebase web configuration; these identifiers are public by design. No service-account key or private credential is included.
+Open http://localhost:8080/. Local development connects to the real `friendlyeats` database using anonymous authentication, not an emulator. `public/firebase-config.js` is local deployment configuration and is excluded from Git. Configure it locally with an authorized, restricted Firebase browser API key before building or deploying. No API key or service-account credential is stored in this repository.
 
 ## Deploy
 
