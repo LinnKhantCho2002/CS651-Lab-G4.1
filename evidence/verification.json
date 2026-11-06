@@ -1,0 +1,184 @@
+{
+  "verifiedAt": "2026-11-06",
+  "url": "https://friendlyeats-dot-cs651-n33-lcho-20261014.uw.r.appspot.com/",
+  "project": "cs651-n33-lcho-20261014",
+  "service": "friendlyeats",
+  "version": "g41-20261106b",
+  "database": "friendlyeats",
+  "nativeMode": true,
+  "health": {
+    "status": "ok",
+    "assignment": "G4.1",
+    "hosting": "Google App Engine"
+  },
+  "restaurantCount": 20,
+  "compoundQueries": [
+    {
+      "fields": [
+        "category"
+      ],
+      "sort": "avgRating",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "category"
+      ],
+      "sort": "numRatings",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "city"
+      ],
+      "sort": "avgRating",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "city"
+      ],
+      "sort": "numRatings",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "category",
+        "city"
+      ],
+      "sort": "avgRating",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "category",
+        "city"
+      ],
+      "sort": "numRatings",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "price"
+      ],
+      "sort": "avgRating",
+      "count": 3,
+      "matches": true
+    },
+    {
+      "fields": [
+        "price"
+      ],
+      "sort": "numRatings",
+      "count": 3,
+      "matches": true
+    },
+    {
+      "fields": [
+        "category",
+        "price"
+      ],
+      "sort": "avgRating",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "category",
+        "price"
+      ],
+      "sort": "numRatings",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "city",
+        "price"
+      ],
+      "sort": "avgRating",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "city",
+        "price"
+      ],
+      "sort": "numRatings",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "category",
+        "city",
+        "price"
+      ],
+      "sort": "avgRating",
+      "count": 1,
+      "matches": true
+    },
+    {
+      "fields": [
+        "category",
+        "city",
+        "price"
+      ],
+      "sort": "numRatings",
+      "count": 1,
+      "matches": true
+    }
+  ],
+  "uiCombinedFilter": {
+    "count": 1,
+    "text": "Bar Spot\n$$$\nstarstarstarstarstar_border\nRamen ● Denver",
+    "description": "restaurant\nFriendlyEats\nfilter_list You're seeing Ramen places in Denver with a price of $$$ sorted by # of reviews"
+  },
+  "liveReview": {
+    "reviewFromLiveAppSaved": true,
+    "reviewPersistedAfterReload": true,
+    "detailUrl": "https://friendlyeats-dot-cs651-n33-lcho-20261014.uw.r.appspot.com/restaurants/9CrYgHhhFwYulY0h2A8T?1794000965563",
+    "realtime": {
+      "received": true,
+      "numRatings": 3
+    },
+    "aggregate": {
+      "storedCount": 3,
+      "actualCount": 3,
+      "storedAverage": 4.333333333333333,
+      "calculatedAverage": 4.333333333333333
+    }
+  },
+  "concurrentTransactions": {
+    "reviewsAttempted": 3,
+    "reviewsSaved": 3,
+    "countMatches": true,
+    "storedAverage": 4,
+    "calculatedAverage": 4
+  },
+  "rules": {
+    "unauthenticatedReadStatus": 403,
+    "restaurantRenameStatus": 403,
+    "invalidRating": "permission-denied",
+    "originalNameUnchanged": true
+  },
+  "indexes": {
+    "ready": 14
+  },
+  "npmAudit": {
+    "vulnerabilities": 0
+  },
+  "canvas": {
+    "assignmentUrl": "https://csueb.instructure.com/courses/57022/assignments/648336",
+    "due": "2026-11-06T23:00:00-08:00",
+    "points": 20,
+    "submissionStatus": "not submitted"
+  }
+}
