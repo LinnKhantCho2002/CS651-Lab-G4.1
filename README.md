@@ -49,6 +49,8 @@ Requires Node.js 22 or newer and npm.
 
 ```sh
 npm ci
+cp public/firebase-config.example.js public/firebase-config.js
+# Set the restricted browser API key in the ignored firebase-config.js file.
 npm run build
 npm run check
 npm start
