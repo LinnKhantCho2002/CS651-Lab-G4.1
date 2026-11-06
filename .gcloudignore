@@ -7,3 +7,5 @@ submissions/
 README.md
 *.log
 .playwright-mcp/
+
+.local/
