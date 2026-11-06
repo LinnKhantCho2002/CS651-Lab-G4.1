@@ -138,7 +138,7 @@
   ],
   "uiCombinedFilter": {
     "count": 1,
-    "text": "Bar Spot\n$$$\nstarstarstarstarstar_border\nRamen ● Denver",
+    "text": "Bar Spot\n$$$\nstarstarstarstarstar_border\nRamen \u25cf Denver",
     "description": "restaurant\nFriendlyEats\nfilter_list You're seeing Ramen places in Denver with a price of $$$ sorted by # of reviews"
   },
   "liveReview": {
@@ -179,6 +179,15 @@
     "assignmentUrl": "https://csueb.instructure.com/courses/57022/assignments/648336",
     "due": "2026-11-06T23:00:00-08:00",
     "points": 20,
-    "submissionStatus": "not submitted"
+    "submissionStatus": "submitted",
+    "attempt": 1,
+    "submittedAt": "2026-11-06T13:39:00-08:00",
+    "groupSubmission": true,
+    "files": [
+      "G4.1_GAE_Deployment.png",
+      "G4.1_App_Running.png",
+      "G4.1_Firestore_Data.png"
+    ],
+    "liveUrlIncludedInComment": true
   }
 }
